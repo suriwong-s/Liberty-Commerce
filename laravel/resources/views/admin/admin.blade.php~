@@ -1,0 +1,29 @@
+@extends('layouts.app')
+
+@section('content')
+<body>
+  <div class="container-5">
+    <div class="container-header-5>">{{ __('Nouveau Produit') }}</div>
+    <form method="POST" action="{{ route('admin') }}">
+      @csrf
+      
+      <label type="Product">{{ __('Definir le nom du produit') }}</label>
+      <input type="text" name="titre"><br>
+
+      <label type="Description">{{ __('Description du produit') }}</label>
+      <input type="text" name="description"><br>
+
+      <label type="Price">{{ __('Definir le prix') }}</label>
+      <input type="text" name="prix"><br>
+
+      <label type="photo">{{ __('Image') }}</label>
+      <input type="text" name="image"><br>
+
+      <label type="quantity">{{ __('Definir la quantite') }}</label>
+      <input type="text" name="quantite"><br>
+
+      <button type="submit" class="button-5">{{ __('Ajouter le produit') }}</button>
+    </form>
+  </div>
+</body>
+@endsection
